@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo del área de un polígono</title>
+    <link rel="stylesheet" type="text/css" href="./src/animate.min.css">
+    <link rel="preload" href="styles.css" as="styles">
+    <link rel="preload" href="script.js" as="script">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body onload="init()">
+    <div style="position: absolute;top: 0px;z-index: 1;">
+        <img src="./assets/Img/logo.png" alt="logo: escuela nueva">
+    </div>
+
+    <div class="contendor-bienvenida">
+
+        <div class="contenido-actividad-bienvenida">
+            <div class="bienvenida">
+                <div class="titulo-presentation">
+                    <!--  <img src="./assets/img/Titulo.png" class="responsive" alt=""> -->
+                </div>
+
+            </div>
+            <div id="slider1">
+                <div class="texto-slider1">
+                    <p>Vamos a analizar el Área de un poligono regular tomando como ejemplo un pena</p>
+                </div>
+                <div>
+                    <img src="./assets/img/poligono.png" class="responsive" alt="">
+                </div>
+            </div>
+            <div id="slider2">
+                <div>
+                    <div class="animacion-slider2">
+                        <div>
+                            <img src="./assets/animaciones/animacion3.gif" class="responsive"  alt="">
+                        </div>                        
+                        <div>
+                            <p><b>Elementos Notables son:</b></p>
+                            <p class="animate__animated animate__fadeIn animate__delay-2s">El <span class="nota">APOTEMA</span> coincide si dividiésemos el polígono regular en
+                                triangulo, en este caso 5 triángulos y coinciden con la altura del triangulo pero en este
+                                proceso hablamos de <span class="nota">APOTEMA</span> y no de altura.</p>
+                            <p class="animate__animated animate__fadeIn animate__delay-5s">Un nuevo elemento seria su <span class="lado">LADO</span> y otro es la suma de todos sus
+                                lados que es el <span class="perimetro">PERIMETRO</span></p>
+                        </div>
+                    </div>
+                   
+                </div>
+
+            </div>
+            <div id="slider3">
+                
+                <div class="texto-slider3">
+                    <p><b>Elementos Notables son:</b></p>
+                    <p>El desarrollo del cálculo de <span class="nota">Área</span> de cualquier polígono regular se basa
+                        en la descomposición en triangulos de los poígonos regulares.</p>
+                    <p>En este caso el <span class="nota">Polígono</span> se descomponen en <span class="nota">5
+                            triángulos</span> exactamente iguales.</p>
+                </div>
+                <div>
+                    <img src="./assets/animaciones/animacion2.gif" class="responsive" alt="" sizes="" srcset="">
+                </div>
+
+
+            </div>
+            <div id="slider4">
+                <div class="texto-slider4">
+                    <p>De esta manera el <span class="nota">Área(A)</span> de cualquier polígono regular es igual a
+                        <span class="nota">Perímetro(P)</span> por el <span class="nota">Apotema(ap)</span> dividido
+                        entre <span class="nota">2</span>.</p>
+                </div>
+                <div>
+                    <img src="./assets/img/apotema-grafica.png" class="responsive-grafica" alt="" sizes="" srcset="">
+                </div>
+            </div>
+            <div id="slider5">
+                <div class="ejemplo-formula">
+                    <p>Ejemplo:</p>
+                    <img src="./assets/img/formula.png" class="responsive" alt="">
+                </div>
+                <div>
+                    <img src="./assets/animaciones/animacion1.gif" class="responsive-grafica" alt="" sizes="" srcset="">
+                </div>
+            </div>
+            <div id="slider6">
+                <h1>Halla el <span class="note">Área</span> de los siguientes polígonos regulares:</h1>
+                <div class="contenedor-ejercicios">
+                    <div class="row">
+                        <div>
+                            <img src="./assets/img/figuras_ejercicio/figura1.png" class="responsive" alt="">
+                        </div>
+                        <div>
+                            <div class="ejercicios">
+                                <div>
+                                    A <span>=</span>
+                                </div>
+                                <div>
+                                    <div>
+                                        <input type="text" name="" id="input1Ej1"><span class="medida">cm</span> x
+                                        <input type="text" name="" id="input2Ej1"><span class="medida">cm</span>
+                                    </div>
+                                    <hr>
+                                    <div>
+                                        2
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row-resultado">
+                                <div>
+                                    A <span>=</span> <input type="text" name="" id="input3Ej1"><span
+                                        class="medida">cm<sup>2</sup></span>
+                                </div>
+                                <div class="resultadoEj1">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div>
+                            <img src="./assets/img/figuras_ejercicio/figura3.png" class="responsive" alt="">
+                        </div>
+                        <div>
+                            <div class="ejercicios">
+                                <div>
+                                    A <span>=</span>
+                                </div>
+                                <div>
+                                    <div>
+                                        <input type="text" name="" id="input1Ej2"><span class="medida">cm</span> x
+                                        <input type="text" name="" id="input2Ej2"><span class="medida">cm</span>
+                                    </div>
+                                    <hr>
+                                    <div>
+                                        2
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row-resultado">
+                                <div>
+                                    A <span>=</span> <input type="text" name="" id="input3Ej2"><span
+                                        class="medida">cm<sup>2</sup></span>
+                                </div>
+                                <div class="resultadoEj2">
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div>
+                            <img src="./assets/img/figuras_ejercicio/figura2.png" class="responsive" alt="">
+                        </div>
+                        <div>
+                            <div class="ejercicios">
+                                <div>
+                                    A <span>=</span>
+                                </div>
+                                <div>
+                                    <div>
+                                        <input type="text" name="" id="input1Ej3"><span class="medida">cm</span> x
+                                        <input type="text" name="" id="input2Ej3"><span class="medida">cm</span>
+                                    </div>
+                                    <hr>
+                                    <div>
+                                        2
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row-resultado">
+                                <div>
+                                    A <span>=</span> <input type="text" name="" id="input3Ej3"><span
+                                        class="medida">cm<sup>2</sup></span>
+                                </div>
+                                <div class="resultadoEj3">
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div>
+                            <img src="./assets/img/figuras_ejercicio/figura4.png" class="responsive" alt="">
+                        </div>
+                        <div>
+                            <div class="ejercicios">
+                                <div>
+                                    A <span>=</span>
+                                </div>
+                                <div>
+                                    <div>
+                                        <input type="text" name="" id="input1Ej4"><span class="medida">cm</span> x
+                                        <input type="text" name="" id="input2Ej4"><span class="medida">cm</span>
+                                    </div>
+                                    <hr>
+                                    <div>
+                                        2
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row-resultado">
+                                <div>
+                                    A <span>=</span> <input type="text" name="" id="input3Ej4"><span
+                                        class="medida">cm<sup>2</sup></span>
+                                </div>
+                                <div class="resultadoEj4">
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                                     
+                </div>
+                <div class="row">
+                    <div class="btn-comprobar" onclick="validarInputs()" style="cursor:pointer">
+                        <img src="./assets/img/btnComprobar.svg" class="responsive-comprobar " alt="">
+                    </div>
+                </div> 
+            </div>
+            <div>
+                <div class="siguienteBtn ">
+
+                </div>
+            </div>
+        </div>
+        <div class="mensaje-actividad">
+            <div>
+                datos incorrectos
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="./src/presentacion.js"></script>
+    <script type="text/javascript" src="./src/sounds.js"></script>
+</body>
+
+</html>
