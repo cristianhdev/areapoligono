@@ -111,6 +111,10 @@ span.medida {
   height: auto;
 }
 
+.responsive-formula {
+  width:50%;
+  height: auto;
+}
 
 
 .ejemplo-formula {
@@ -437,6 +441,11 @@ input[type="text"].incorrectoInput {
 
   .responsive-grafica {
     width: 100%;
+    height: auto;
+  }
+
+  .responsive-formula {
+    width:80%;
     height: auto;
   }
 
