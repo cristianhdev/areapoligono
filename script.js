@@ -1,6 +1,7 @@
 
 let video;
-
+let audioOvers = null;
+let audioClick = null;
 
 let sliders = [
     '.bienvenida',
@@ -28,6 +29,28 @@ let arrayInputsGrupo = [
 
 function init() {
     presentacionActividad = new Presentacion(sliders, '.siguienteBtn', null, false)
+    audioOvers = new Sonido('16');
+    audioClick = new Sonido('17');
+    document.querySelector('.siguienteBtn').addEventListener('mouseover', btnOverMenu, false)
+    document.querySelector('.siguienteBtn').addEventListener('mouseout', btnOutMenu, false)
+    document.querySelector('.btn-comprobar').addEventListener('mouseover', btnOverMenu, false)
+    /* document.querySelector('.btn-comprobar').addEventListener('mouseout', btnOutMenu, false) */
+    document.querySelector('.siguienteBtn').addEventListener('click', btnClick, false)
+    document.querySelector('.btn-comprobar').addEventListener('click', btnClick, false)
+}
+
+
+function btnOverMenu() {
+    audioClick.playAudio()
+}
+
+function btnClick() {
+    audioOvers.playAudio()
+}
+
+
+function btnOutMenu() {
+    audioOvers.stopAudio()
 }
 
 function cargarActividadFinal() {
@@ -36,6 +59,8 @@ function cargarActividadFinal() {
 
 
 function validarInputs() {
+    audioClick.stopAudio()
+    audioClick.playAudio()
     let inputs = document.querySelectorAll('input')
     let respuestas = []
     let correcto = false
